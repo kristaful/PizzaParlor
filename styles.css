@@ -14,45 +14,61 @@ html {
 }
 
 body {
-  background-color: grey;
-
+  background-color: white;
 }
 
 * {
   margin: 0;
 }
 
+h1 {
+  font-family: Brush Script MT, cursive;
+  font-size: 5em;
+  text-align: center;
+  padding-top: 60px;
+}
+
+h2 {
+  font-size: 2em;
+  text-align: center;
+}
+
 /* style nav list */
 
-#nav-list {
-  list-style-type: none;
+.nav-list {
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: 0px 0px 10px;
-  padding: 0;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  padding:5rem 0;
   display: flex;
 }
 
-#nav-list a {
-  display: inline-block;
-  color: black;
+.nav-item {
+  list-style: none;
+  background-color: rgba(255, 255, 253, .5);
   padding: 14px 16px;
+}
+
+.nav-list a {
+  color: black;
   text-decoration: none;
 }
 
+
 li a:hover {
-  background-color: red;
+  background-color: rgba(108, 163, 81, 0.98);
+
 }
 
 /* style flex box columns and descriptions */
 
 .column-layout {
   background-color: hsla(360, 100%, 100%, 0.5);
-  padding: 75px 50px;
+  padding: 50px 50px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .desc {
@@ -61,9 +77,9 @@ li a:hover {
 }
 
 .columns {
-  margin: 5px;
-  border: 1px solid black;
-  width: 250px;
+  margin: 10px;
+  border: 1px solid darkgrey;
+  width: 425px;
 }
 
 .columns img {
@@ -72,7 +88,7 @@ li a:hover {
 }
 
 .columns:hover {
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 /* style the form conainter */
@@ -82,7 +98,7 @@ div.form-container {
   color: white;
   border-color: black;
   border-style: double;
-  background-color: rgba(51, 51, 51, 0.80);
+  background-color: rgba(216, 79, 79, 0.50);
   padding: 30px 30px 30px 30px;
 }
 
@@ -91,7 +107,7 @@ div.form-container {
 input[type=text], select, textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid grey;
+  border: 1px solid black;
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 10px;
@@ -101,7 +117,6 @@ input[type=text], select, textarea {
 /* Style the submit button */
 
 input[type=submit], button {
-  background-color: grey;
   color: black;
   padding: 12px 20px;
   border: solid;
@@ -111,12 +126,11 @@ input[type=submit], button {
 }
 
 input[type=submit], button:hover {
-  background-color: white;
+  background-color: grey;
 }
 
 .flex-form {
-  background-color: hsla(360, 100%, 100%, 0.5);
-  padding: 100px 50px;
+  padding: 50px 50px;
   display: flex;
 }
 
@@ -174,7 +188,7 @@ input[type=submit], button:hover {
 
 cite img {
   border-radius: 50%;
-  width: 50px;
+  width: 30px;
 }
 
 .socials {
@@ -188,11 +202,17 @@ aside {
   margin-top: 100px;
 }
 
-/* Footer style */
-
-  #footer {
-    font-size: .75em;
-    text-align: center;
-    padding-bottom: 20px;
-    clear: both;
+@media only screen and (max-width: 568px) {
+  .column-layout, .flex-form {
+    display: block;
   }
+
+    .columns {
+     width: 100%;
+  }
+
+  .nav-list {
+    display: block;
+    text-align: center;
+  }
+}
