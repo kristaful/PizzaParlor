@@ -36,7 +36,7 @@ h2 {
 /* style nav list */
 
 .nav-list {
-  background-image: url(background.jpg);
+  background-image: url("images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: 0px 0px 10px;
